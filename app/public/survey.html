@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+<head>
+  <meta charset="utf-8">
+  <title>Friend Finder</title>
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./css/friendfinder.css">
+  <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+  <!-- Validation -->
+  <!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.10.2/validator.min.js"></script>  -->
+
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center"><strong><i class="glyphicon glyphicon-heart"></i> Friend Finder Survey</strong></h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <form method="POST" id="surveyForm" role="form" data-toggle="validator">
+          <div class="form-group has-feedback">
+            <h3><strong>About You</strong></h3>
+            <label for="name">Name (Required)</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="link">Link to Photo Image (Required)</label>
+            <input type="url" class="form-control" id="url"  placeholder="Enter Url" required>
+          </div>
+          <hr>
+          <div class="form-group">
+            <h3><strong>Question 1</strong></h3>
+            <h4>You love coding like a champ</h4>
+            <select data-placeholder="" class="chosen-select" id="q1" required>
+              <option value="" disabled selected>Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <h3><strong>Question 2</strong></h3>
+            <h4>Your can't stop thinking about Star Wars.</h4>
+            <select data-placeholder="" class="chosen-select" id="q2" required>
+              <option value="" disabled selected>Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <h3><strong>Question 3</strong></h3>
+            <h4>You love ice cream, for sure...</h4>
+            <select data-placeholder="" class="chosen-select" id="q3" required>
+              <option value="" disabled selected>Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <h3><strong>Question 4</strong></h3>
+            <h4>You dislike TV, very much.</h4>
+            <select data-placeholder="" class="chosen-select" id="q4" required>
+              <option value="" disabled selected>Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <h3><strong>Question 5</strong></h3>
+            <h4>You are an exercising junkie</h4>
+            <select data-placeholder="" class="chosen-select" id="q5" required>
+              <option value="" disabled selected>Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <h3><strong>Question 6</strong></h3>
+            <h4>Coding Bootcamp is your favorite part of the week</h4>
+            <select data-placeholder="" class="chosen-select" id="q6" required>
+              <option value="" disabled selected>Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <h3><strong>Question 7</strong></h3>
+            <h4>Your are not a pet person.</h4>
+            <select data-placeholder="" class="chosen-select" id="q7" required>
+              <option value="" disabled selected>Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <h3><strong>Question 8</strong></h3>
+            <h4>You have never been outside of your city.</h4>
+            <select data-placeholder="" class="chosen-select" id="q8" required>
+              <option value="" disabled selected>Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <h3><strong>Question 9</strong></h3>
+            <h4>You do not like traveling</h4>
+            <select data-placeholder="" class="chosen-select" id="q9" required>
+              <option value="" disabled selected>Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <h3><strong>Question 10</strong></h3>
+            <h4>Your favorite activity of the day has been to respond to this survey.</h4>
+            <select data-placeholder="" class="chosen-select" id="q10" required>
+              <option value="" disabled selected>Select Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-md" id="submit-btn"></span>Submit</button>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <a href= "/api/tables"> API Friends List</a> | <a href= "https://github.com/ngbricen/FriendFinder"> GitHub Repo</a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    // Chosen CSS
+    // var config = {
+    //   // '.chosen-select'           : {},
+    //   // '.chosen-select-deselect'  : {allow_single_deselect:true},
+    //   // '.chosen-select-no-single' : {disable_search_threshold:10},
+    //   '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+    //   '.chosen-select-width'     : {width:"95%"}
+    // }
+    // for (var selector in config) {
+    //   $(selector).chosen(config[selector]);
+    // }
+
+    //Get Response details in variable
+    $("#submit-btn").on("click", function(event) {
+      // 
+        // Form validation
+      function validateForm() {
+        var isValid = true;
+        // $(".form-control").each(function() {
+        //   if ( $(this).val() === '' )
+        //       isValid = false;
+        // });
+
+        $('.chosen-select').each(function() {
+
+          if( $(this)[0].value === "")
+            isValid = false
+        })
+        return isValid;
+      }
+
+      if (validateForm() === true){
+        var newSurvey = {
+          name: $("#name").val().trim(),
+          url: $("#url").val().trim(),
+          q1: $("#q1").val().trim(),
+          q2: $("#q2").val().trim(),
+          q3: $("#q3").val().trim(),
+          q4: $("#q4").val().trim(),
+          q5: $("#q5").val().trim(),
+          q6: $("#q6").val().trim(),
+          q7: $("#q7").val().trim(),
+          q8: $("#q8").val().trim(),
+          q9: $("#q8").val().trim(),
+          q10: $("#q10").val().trim()
+        };
+        
+        $.post("/api/new", newSurvey)
+        .done(function(data) {
+          console.log(data);
+          alert("Adding new survey...");
+        });
+      }
+      // else
+      // {
+      //   alert("Please fill out all fields before submitting!");
+      // }
+
+    });
+
+  </script>
+</body>
+</html>
