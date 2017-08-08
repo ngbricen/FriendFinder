@@ -2,7 +2,7 @@ var server = require("../../server.js");
 
 var friends = server.friendsList;
 var friendMatch = server.friendMatchList;
-// console.log(friends);
+console.log(friends);
 module.exports = function(app){
 
 	app.get("/api/friends", function(req, res) {
@@ -13,7 +13,7 @@ module.exports = function(app){
 	app.post("/api/new", function(req, res) {
 		var newSurvey = req.body;
 
-		console.log(req.body);
+		console.log(newSurvey);
 		
 		//Compare friends
 		compareFriends(newSurvey);
@@ -22,6 +22,7 @@ module.exports = function(app){
 
 		res.json(newSurvey);
 
+		console.log(friends);
 	});
 
 	function compareFriends(newFriend){
