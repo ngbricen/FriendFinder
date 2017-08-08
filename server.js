@@ -5,7 +5,7 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-var htmlRoutes = require('./app/routing/htmlRoutes')(app);
+
 
 
 app.use(bodyParser.json());
@@ -51,7 +51,7 @@ module.exports.friendsList = friends ;
 
 module.exports.friendMatchList = friendMatch;
 // console.log(module.exports.friendMatchList);
-
+var htmlRoutes = require('./app/routing/htmlRoutes')(app);
 var apiRoutes = require('./app/routing/apiRoutes')(app);
 
 app.listen(PORT, function() {

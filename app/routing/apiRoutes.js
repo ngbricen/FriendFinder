@@ -2,7 +2,7 @@ var server = require("../../server.js");
 
 var friends = server.friendsList;
 var friendMatch = server.friendMatchList;
-console.log(friends);
+
 module.exports = function(app){
 
 	app.get("/api/friends", function(req, res) {
@@ -20,9 +20,15 @@ module.exports = function(app){
 
 		friends.push(newSurvey);
 
-		res.json(newSurvey);
+		// res.json(newSurvey);
 
-		console.log(friends);
+		  // When the request has ended...
+		req.on("end", function() {
+			res.write("<html><head><title>Hello Noder!</title></head><body>");
+			res.write("<h1>Thank You!</h1>");
+			res.write("</body></html>");
+			res.end();
+		});
 	});
 
 	function compareFriends(newFriend){
