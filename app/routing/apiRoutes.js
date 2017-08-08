@@ -23,12 +23,16 @@ module.exports = function(app){
 		// res.json(newSurvey);
 
 		  // When the request has ended...
-		req.on("end", function() {
+		// req.on("end", function() {
+		// 	console.log("entering");
 			res.write("<html><head><title>Hello Noder!</title></head><body>");
 			res.write("<h1>Thank You!</h1>");
-			res.write("</body></html>");
+			res.write("</body>Test</html>");
 			res.end();
-		});
+			console.log(res)
+			// res.end();
+		// });
+
 	});
 
 	function compareFriends(newFriend){
