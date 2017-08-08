@@ -71,7 +71,7 @@
             </select>
           </div>
 
-          <!-- <div class="form-group">
+          <div class="form-group">
             <h3><strong>Question 3</strong></h3>
             <h4>You love ice cream, for sure...</h4>
             <select data-placeholder="" class="chosen-select" id="q3" required>
@@ -173,7 +173,7 @@
                 <option value="4">4</option>
                 <option value="5">5 (Strongly Agree)</option>
             </select>
-          </div> -->
+          </div>
           <div class="form-group">
             <button type="submit" class="btn btn-primary btn-md" id="submit-btn"></span>Submit</button>
           </div>
@@ -225,15 +225,15 @@
           name: $("#name").val().trim(),
           url: $("#url").val().trim(),
           q1: parseInt($("#q1").val().trim()),
-          q2: parseInt($("#q2").val().trim())
-          // q3: $("#q3").val().trim(),
-          // q4: $("#q4").val().trim(),
-          // q5: $("#q5").val().trim(),
-          // q6: $("#q6").val().trim(),
-          // q7: $("#q7").val().trim(),
-          // q8: $("#q8").val().trim(),
-          // q9: $("#q8").val().trim(),
-          // q10: $("#q10").val().trim()
+          q2: parseInt($("#q2").val().trim()),
+          q3: parseInt($("#q3").val().trim()),
+          q4: parseInt($("#q4").val().trim()),
+          q5: parseInt($("#q5").val().trim()),
+          q6: parseInt($("#q6").val().trim()),
+          q7: parseInt($("#q7").val().trim()),
+          q8: parseInt($("#q8").val().trim()),
+          q9: parseInt($("#q8").val().trim()),
+          q10: parseInt($("#q10").val().trim())
         };
         
         $.post("/api/new", newSurvey)
