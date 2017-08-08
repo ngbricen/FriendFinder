@@ -1,8 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-var $ = require('jquery');
-
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -99,6 +97,16 @@ function compareFriends(newFriend){
     }
   }
   return friendMatch;
+
+  // popupS.prompt({
+  //       content: 'What is your name?',
+  //       onSubmit: function(val) {
+  //               popupS.alert({
+  //                       content: 'Hi, ' + val + '!'
+  //               });
+  //       }
+  //   });
+
 }
 
 app.listen(PORT, function() {
