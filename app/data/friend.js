@@ -25,7 +25,7 @@ var friends = [{
   q7: 2,
   q8: 1,
   q9: 2,
-  q10: 0
+  q10: 1
 }];
 
 module.exports.friendsList = friends ;

@@ -13,14 +13,13 @@ module.exports = function(app){
 
 	app.post("/api/friends", function(req, res) {
 		var newSurvey = req.body;
-
-		console.log(newSurvey);
-		
+	
 		//Compare friends
 		compareFriends(newSurvey);
 
 		friends.push(newSurvey);
 
+		console.log(friendMatch)
 		res.json(friendMatch);
 
 		  // When the request has ended...
@@ -56,10 +55,13 @@ module.exports = function(app){
 			                + Math.abs(parseInt(friends[key]["q9"]) - parseInt(newFriend["q9"]))
 			                + Math.abs(parseInt(friends[key]["q10"]) - parseInt(newFriend["q10"]))
 
+				console.log("sum difference is " + sumDifference + " between "+ newFriend["name"] + " and "  + friends[key]["name"]);
+
 			  //If closer match, need to capture user and picture
 			  if (sumDifference <= minDifference){
 			    minDifference = sumDifference;
-			    friendMatch.push(friends[key]["name"],friends[key]["url"]);
+			    friendMatch[0] = friends[key]["name"];
+			    friendMatch[1] = friends[key]["url"];
 			  }
 			}
 		}
