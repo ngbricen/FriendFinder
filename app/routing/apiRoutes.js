@@ -11,7 +11,7 @@ module.exports = function(app){
 	});
 
 
-	app.post("/api/new", function(req, res) {
+	app.post("/api/friends", function(req, res) {
 		var newSurvey = req.body;
 
 		console.log(newSurvey);
@@ -21,16 +21,15 @@ module.exports = function(app){
 
 		friends.push(newSurvey);
 
-		// res.json(newSurvey);
+		res.json(friendMatch);
 
 		  // When the request has ended...
 		// req.on("end", function() {
 		// 	console.log("entering");
-			res.write("<html><head><title>Hello Noder!</title></head><body>");
-			res.write("<h1>Thank You!</h1>");
-			res.write("</body>Test</html>");
-			res.end();
-			console.log(res)
+			// res.send("<html><head><title>Hello Noder!</title></head><body>");
+			// // res.send("<h1>Thank You!</h1>");
+			// // res.send("</body>Test</html>");
+			// res.end();
 			// res.end();
 		// });
 
