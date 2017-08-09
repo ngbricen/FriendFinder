@@ -1,7 +1,8 @@
-var server = require("../../server.js");
+// var server = require("../../server.js");
+var data = require("../data/friend.js");
 
-var friends = server.friendsList;
-var friendMatch = server.friendMatchList;
+var friends = data.friendsList;
+var friendMatch = [];
 
 module.exports = function(app){
 
